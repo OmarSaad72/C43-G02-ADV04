@@ -70,13 +70,23 @@ namespace Demo
             //action("Omar");
             #endregion
             #region Anonmynous Functions & Lambada Expression
-            Predicate<int> predicate = Num => Num > 0;
+            //Predicate<int> predicate = Num => Num > 0;
+            //predicate.Invoke(10);
+            ////predicate(10);
+            //Func<int, string> func = Num => Num.ToString();
+            //func(10);
+
+            //Action<string> action = Name => Console.WriteLine($"Hello{Name}");
+            //action("Omar");
+            #endregion
+            #region New Features At Delegate in C#10
+            var predicate = (int Num) => Num > 0;
             predicate.Invoke(10);
-            //predicate(10);
-            Func<int, string> func = Num => Num.ToString();
+
+            var func = (int Num) => Num.ToString();
             func(10);
 
-            Action<string> action = Name => Console.WriteLine($"Hello{Name}");
+            var action = (string Name) => Console.WriteLine($"Hello{Name}");
             action("Omar");
             #endregion
         }
