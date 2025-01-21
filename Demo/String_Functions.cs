@@ -20,7 +20,8 @@ namespace Demo
                 }
             }
             return count;
-        } public static int getCountLowererChars(string Name)
+        } 
+        public static int getCountLowererChars(string Name)
         {
             int count = 0;
             if (Name != null)
