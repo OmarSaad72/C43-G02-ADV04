@@ -8,7 +8,7 @@ namespace Demo
 {
     internal class Sorting
     {
-        public static void BubbleSort(int[] array, IntFun sorting)
+        public static void BubbleSort<T>(T[] array, Fun<T> sorting)
         {
             if (array != null)
             {
@@ -24,27 +24,9 @@ namespace Demo
                 }
             }
         }
-
-        public static void BubbleSortDEC(int[] array)
+        private static void Swap<T>(ref T x, ref T y)
         {
-            if (array != null)
-            {
-
-                for (int i = 0; i < array.Length; i++)
-                {
-                    for (int j = 0; j > array.Length - i - 1; j++)
-                    {
-                        if (array[j] > array[j + 1])
-                        {
-                            Swap(ref array[j], ref array[j + 1]);
-                        }
-                    }
-                }
-            }
-        }
-        private static void Swap(ref int x, ref int y)
-        {
-            int temp = x; x = y; y = temp;
+            T temp = x; x = y; y = temp;
         }
     }
 }
