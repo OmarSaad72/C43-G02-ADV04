@@ -60,13 +60,23 @@ namespace Demo
             //}
             #endregion
             #region Delegate_Ex:5{Built In Delegate}
-            Predicate<int> predicate = SomeFun.Test;
+            //Predicate<int> predicate = SomeFun.Test;
+            //predicate.Invoke(10);
+            ////predicate(10);
+            //Func<int, string> func = SomeFun.Cast;
+            //func(10);
+
+            //Action<string> action = SomeFun.Print;
+            //action("Omar");
+            #endregion
+            #region Anonmynous Functions & Lambada Expression
+            Predicate<int> predicate = Num => Num > 0;
             predicate.Invoke(10);
             //predicate(10);
-            Func<int, string> func = SomeFun.Cast;
+            Func<int, string> func = Num => Num.ToString();
             func(10);
 
-            Action<string> action = SomeFun.Print;
+            Action<string> action = Name => Console.WriteLine($"Hello{Name}");
             action("Omar");
             #endregion
         }
