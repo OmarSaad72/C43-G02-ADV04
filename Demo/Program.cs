@@ -45,19 +45,29 @@ namespace Demo
             //}
             #endregion
             #region Delegate_Ex:4
-            List<int> Num = Enumerable.Range(0, 100).ToList();
-            List<int> OddNum = Helper.FindNum(Num, ConditionFun.CheckOdd);
-            foreach (int odd in OddNum)
-            {
-                Console.WriteLine(odd);
-            }
+            //List<int> Num = Enumerable.Range(0, 100).ToList();
+            //List<int> OddNum = Helper.FindNum(Num, ConditionFun.CheckOdd);
+            //foreach (int odd in OddNum)
+            //{
+            //    Console.WriteLine(odd);
+            //}
 
-            List<int> Num1 = Enumerable.Range(0, 100).ToList();
-            List<int> EvenNum = Helper.FindNum(Num1, ConditionFun.CheckOdd);
-            foreach (int Even in EvenNum)
-            {
-                Console.WriteLine(Even);
-            }
+            //List<int> Num1 = Enumerable.Range(0, 100).ToList();
+            //List<int> EvenNum = Helper.FindNum(Num1, ConditionFun.CheckOdd);
+            //foreach (int Even in EvenNum)
+            //{
+            //    Console.WriteLine(Even);
+            //}
+            #endregion
+            #region Delegate_Ex:5{Built In Delegate}
+            Predicate<int> predicate = SomeFun.Test;
+            predicate.Invoke(10);
+            //predicate(10);
+            Func<int, string> func = SomeFun.Cast;
+            func(10);
+
+            Action<string> action = SomeFun.Print;
+            action("Omar");
             #endregion
         }
     }

@@ -41,8 +41,8 @@ namespace Demo
             return result;
         }
 
-        public delegate bool FUnDelegate(int i);
-        public static List<int> FindNum(List<int> list , FUnDelegate fUn)
+        //public delegate bool FUnDelegate(int i);
+        public static List<int> FindNum(List<int> list, Predicate<int> fUn)
         {
             List<int> result = new List<int>();
             if (list != null)
